@@ -23,6 +23,7 @@ class Song
   end 
   
   def save 
+<<<<<<< HEAD
     @@all << self 
   end
   
@@ -30,6 +31,13 @@ class Song
     song = Song.new(song)
     song.save
     song
+=======
+    
+  end
+  
+  def self.create(song) 
+    Song.new(song)
+>>>>>>> 53720174807534dd587a12285f3b1e3fd6732545
   end
   
   def artist=(artist)
@@ -60,6 +68,10 @@ class Song
   end
   
   def self.new_from_filename(name)
+<<<<<<< HEAD
+=======
+    #parse the filename
+>>>>>>> 53720174807534dd587a12285f3b1e3fd6732545
     song_name = name.split(" - ")[1]
     artist_name = name.split(" - ")[0]
     genre_name = name.split(" - ")[2].chomp(".mp3")
@@ -70,7 +82,11 @@ class Song
   end
   
   def self.create_from_filename(name)
+<<<<<<< HEAD
     self.new_from_filename(name)
+=======
+    @@all << self.new_from_filename(name)
+>>>>>>> 53720174807534dd587a12285f3b1e3fd6732545
 
   end
   
